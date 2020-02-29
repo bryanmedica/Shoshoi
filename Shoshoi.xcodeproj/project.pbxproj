@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA4180AE240976F500BE6876 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4180AD240976F500BE6876 /* ProfileView.swift */; };
+		DAACFC752408B3D600B0F10A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACFC742408B3D600B0F10A /* Card.swift */; };
+		DAB241C82407A931008515A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241C72407A931008515A4 /* AppDelegate.swift */; };
+		DAB241CA2407A931008515A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241C92407A931008515A4 /* SceneDelegate.swift */; };
+		DAB241CC2407A931008515A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241CB2407A931008515A4 /* ContentView.swift */; };
+		DAB241CE2407A934008515A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB241CD2407A934008515A4 /* Assets.xcassets */; };
+		DAB241D12407A934008515A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB241D02407A934008515A4 /* Preview Assets.xcassets */; };
+		DAB241D42407A934008515A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB241D22407A934008515A4 /* LaunchScreen.storyboard */; };
+		DAB241DD2407B7BC008515A4 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = DAB241DC2407B7BC008515A4 /* cards.json */; };
+		DAB241DF2407BBAA008515A4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241DE2407BBAA008515A4 /* UserData.swift */; };
+		DAB241E12407D176008515A4 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241E02407D176008515A4 /* FlipView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA4180AD240976F500BE6876 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DAACFC742408B3D600B0F10A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DAB241C42407A931008515A4 /* Shoshoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoshoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB241C72407A931008515A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAB241C92407A931008515A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAB241CB2407A931008515A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DAB241CD2407A934008515A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAB241D02407A934008515A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAB241D32407A934008515A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAB241D52407A934008515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB241DC2407B7BC008515A4 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
+		DAB241DE2407BBAA008515A4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		DAB241E02407D176008515A4 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAB241C12407A931008515A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA0DCCAC2408B2E400424B41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAACFC742408B3D600B0F10A /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAB241BB2407A931008515A4 = {
+			isa = PBXGroup;
+			children = (
+				DAB241C62407A931008515A4 /* Shoshoi */,
+				DAB241C52407A931008515A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAB241C52407A931008515A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB241C42407A931008515A4 /* Shoshoi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAB241C62407A931008515A4 /* Shoshoi */ = {
+			isa = PBXGroup;
+			children = (
+				DA0DCCAC2408B2E400424B41 /* Models */,
+				DAB241DB2407B773008515A4 /* Resources */,
+				DAB241C72407A931008515A4 /* AppDelegate.swift */,
+				DAB241C92407A931008515A4 /* SceneDelegate.swift */,
+				DAB241CB2407A931008515A4 /* ContentView.swift */,
+				DAB241CD2407A934008515A4 /* Assets.xcassets */,
+				DAB241D22407A934008515A4 /* LaunchScreen.storyboard */,
+				DAB241D52407A934008515A4 /* Info.plist */,
+				DAB241CF2407A934008515A4 /* Preview Content */,
+				DAB241DE2407BBAA008515A4 /* UserData.swift */,
+				DAB241E02407D176008515A4 /* FlipView.swift */,
+				DA4180AD240976F500BE6876 /* ProfileView.swift */,
+			);
+			path = Shoshoi;
+			sourceTree = "<group>";
+		};
+		DAB241CF2407A934008515A4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DAB241D02407A934008515A4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DAB241DB2407B773008515A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAB241DC2407B7BC008515A4 /* cards.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAB241C32407A931008515A4 /* Shoshoi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB241D82407A934008515A4 /* Build configuration list for PBXNativeTarget "Shoshoi" */;
+			buildPhases = (
+				DAB241C02407A931008515A4 /* Sources */,
+				DAB241C12407A931008515A4 /* Frameworks */,
+				DAB241C22407A931008515A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shoshoi;
+			productName = Shoshoi;
+			productReference = DAB241C42407A931008515A4 /* Shoshoi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAB241BC2407A931008515A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Bryan MEDICA";
+				TargetAttributes = {
+					DAB241C32407A931008515A4 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DAB241BF2407A931008515A4 /* Build configuration list for PBXProject "Shoshoi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAB241BB2407A931008515A4;
+			productRefGroup = DAB241C52407A931008515A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAB241C32407A931008515A4 /* Shoshoi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAB241C22407A931008515A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB241D42407A934008515A4 /* LaunchScreen.storyboard in Resources */,
+				DAB241D12407A934008515A4 /* Preview Assets.xcassets in Resources */,
+				DAB241CE2407A934008515A4 /* Assets.xcassets in Resources */,
+				DAB241DD2407B7BC008515A4 /* cards.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAB241C02407A931008515A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB241E12407D176008515A4 /* FlipView.swift in Sources */,
+				DAB241C82407A931008515A4 /* AppDelegate.swift in Sources */,
+				DAB241CA2407A931008515A4 /* SceneDelegate.swift in Sources */,
+				DAACFC752408B3D600B0F10A /* Card.swift in Sources */,
+				DAB241DF2407BBAA008515A4 /* UserData.swift in Sources */,
+				DA4180AE240976F500BE6876 /* ProfileView.swift in Sources */,
+				DAB241CC2407A931008515A4 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAB241D22407A934008515A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB241D32407A934008515A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAB241D62407A934008515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAB241D72407A934008515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAB241D92407A934008515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Shoshoi/Preview Content\"";
+				DEVELOPMENT_TEAM = HN3J82XMBY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Shoshoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryanmedica.Shoshoi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAB241DA2407A934008515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Shoshoi/Preview Content\"";
+				DEVELOPMENT_TEAM = HN3J82XMBY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Shoshoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryanmedica.Shoshoi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAB241BF2407A931008515A4 /* Build configuration list for PBXProject "Shoshoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB241D62407A934008515A4 /* Debug */,
+				DAB241D72407A934008515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB241D82407A934008515A4 /* Build configuration list for PBXNativeTarget "Shoshoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB241D92407A934008515A4 /* Debug */,
+				DAB241DA2407A934008515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAB241BC2407A931008515A4 /* Project object */;
+}

@@ -33,13 +33,13 @@ struct ProfileView: View {
             }.foregroundColor(Color.black)
             .background(Color.orange)
                 .alert(isPresented: $showingAlert) {
-                Alert(title: Text("Remettre les règles de départ?"),
-                      message: Text(""),
-                      primaryButton: .cancel(Text("Je garde les miennes")),
-                      secondaryButton: .default(Text("On reprend à zéro"), action: {
-                        self.cardManager.clearRules()
-                }))
-            }
+                    Alert(title: Text("Remettre les règles de départ?"),
+                          message: Text(""),
+                          primaryButton: .cancel(Text("Je garde les miennes")),
+                          secondaryButton: .default(Text("On reprend à zéro"), action: {
+                            self.cardManager.clearRules()
+                    }))
+                }
             }
     }
 }

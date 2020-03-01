@@ -59,6 +59,7 @@ final class CardManager: ObservableObject  {
         } else {
             self.actualDesc = self.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
         }
+        self.updateDesc.toggle()
     }
     
     func newCard() -> Void {
@@ -81,7 +82,7 @@ final class CardManager: ObservableObject  {
                 UserDefaults.standard.removeObject(forKey: elem.name)
             }
         }
-        self.updateDesc.toggle()
+        self.updateCardDesc()
     }
 
 }

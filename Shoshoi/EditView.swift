@@ -19,7 +19,7 @@ struct EditView: View {
                 TextField("Entrez la règle", text: $desc, onEditingChanged: { (changed) in
                     if !changed {
                         UserDefaults.standard.set(self.desc, forKey: self.name)
-                        self.cardManager.updateDesc.toggle()
+                        self.cardManager.updateCardDesc()
                     }
                 }) {
                 }.foregroundColor(.white)
@@ -28,7 +28,7 @@ struct EditView: View {
                 Button(action: {
                     self.desc = ""
                     UserDefaults.standard.set(self.desc, forKey: self.name)
-                    self.cardManager.updateDesc.toggle()
+                    self.cardManager.updateCardDesc()
                 }) {
                     Image(systemName: "xmark.circle")
                         .foregroundColor(Color.gray)

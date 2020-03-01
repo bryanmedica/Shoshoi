@@ -45,13 +45,11 @@ struct FlipView: View {
     
 }
 
-public struct Side: View
-{
+public struct Side: View {
     @EnvironmentObject var cardManager: CardManager
     var imageName: String = ""
 
-    public var body: some View
-    {
+    public var body: some View {
         Image(imageName)
             .resizable()
             .frame(width: 240, height: 360)

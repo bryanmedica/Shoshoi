@@ -45,8 +45,7 @@ struct TopBar: View {
                     .foregroundColor(Color.orange)
                     .font(.system(size: 28))
             }.sheet(isPresented: $showSettings) {
-                ProfileView()
-                    .environmentObject(self.cardManager)
+                ProfileView().environmentObject(self.cardManager)
             }
         }.padding()
         .frame(minWidth: 0.0, maxWidth: .infinity)

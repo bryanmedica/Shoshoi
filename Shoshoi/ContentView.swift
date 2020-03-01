@@ -11,6 +11,13 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var cardManager: CardManager
 
+    init() {
+        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UITableView.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+        UITableViewCell.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+    }
+    
     var body: some View {
         VStack {
             
@@ -21,6 +28,7 @@ struct ContentView: View {
             Spacer()
 
             FlipView().padding()
+
             Text((self.cardManager.isCardFaceUp ? self.cardManager.actualDesc
                 : "Tapez sur le paquet pour découvrir la prochaine carte!"))
                 .multilineTextAlignment(.center)

@@ -30,15 +30,14 @@ struct ProfileView: View {
                 self.showingAlert.toggle()
             }) {
                 Text("Remettre les règles de départ")
-            }.foregroundColor(Color.black)
-            .background(Color.orange)
+            }.foregroundColor(Color.white)
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text("Remettre les règles de départ?"),
                           message: Text(""),
-                          primaryButton: .cancel(Text("Je garde les miennes")),
-                          secondaryButton: .default(Text("On reprend à zéro"), action: {
-                            self.cardManager.clearRules()
-                    }))
+                          primaryButton: .default(Text("On reprend à zéro"), action: {
+                                  self.cardManager.clearRules()
+                          }),
+                          secondaryButton: .cancel(Text("Je garde les miennes")))
                 }
             }
     }
@@ -51,9 +50,7 @@ public struct CardRow: View {
     public var body: some View {
         HStack {
             Text(self.title)
-                .foregroundColor(Color.white)
-                .padding()
-                .frame(width: 85)
+                .frame(width: 80)
             Text(self.desc)
             .foregroundColor(Color.white)
                 .padding([.vertical])

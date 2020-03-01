@@ -52,8 +52,7 @@ public struct Side: View
 
     public var body: some View
     {
-        Image(
-            (imageName == "shoshoi_back" ? "shoshoi_back": cardManager.actualCard))
+        Image(imageName)
             .resizable()
             .frame(width: 240, height: 360)
     }

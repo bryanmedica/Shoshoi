@@ -51,7 +51,7 @@
     },
     {
         "name": "Quatre",
-        "defaultRule": "Jeu du regard !",
+        "defaultRule": "La personne qui tire cette carte lance un jeu du regard !",
         "cardPrefix": "4",
     },
     {

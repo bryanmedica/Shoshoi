@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct EditView: View {
-
     @EnvironmentObject var cardManager: CardManager
     var name: String
     @State var desc: String
@@ -20,19 +19,16 @@ struct EditView: View {
                 TextField("Entrez la règle", text: $desc, onEditingChanged: { (changed) in
                     if !changed {
                         UserDefaults.standard.set(self.desc, forKey: self.name)
-                        self.cardManager.sale = !(self.cardManager.sale)
-                        print("C'est fait : \(self.desc)")
+                        self.cardManager.updateDesc.toggle()
                     }
                 }) {
                 }.foregroundColor(.white)
-                    .padding()
+                .padding()
 
-                
                 Button(action: {
                     self.desc = ""
                     UserDefaults.standard.set(self.desc, forKey: self.name)
-                    self.cardManager.sale = !(self.cardManager.sale)
-                    print("C'est fait : \(self.desc)")
+                    self.cardManager.updateDesc.toggle()
                 }) {
                     Image(systemName: "xmark.circle")
                         .foregroundColor(Color.gray)

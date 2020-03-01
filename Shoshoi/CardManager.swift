@@ -47,7 +47,7 @@ final class CardManager: ObservableObject  {
     @Published var cards = Array(tmp)
     @Published var isCardFaceUp = false
     @Published var rules = cardsJSON
-    @Published var sale = false
+    @Published var updateDesc = false
     
     func updateCardDesc() -> Void {
         let cardPrefix = String(self.actualCard.dropLast())
@@ -73,6 +73,15 @@ final class CardManager: ObservableObject  {
         self.actualCard = self.cards.remove(at: Int.random(in: 0..<52))
         self.updateCardDesc()
         self.isCardFaceUp = false
+    }
+    
+    func clearRules() -> Void {
+        for elem in self.rules {
+            if let _ = UserDefaults.standard.string(forKey: elem.name) {
+                UserDefaults.standard.removeObject(forKey: elem.name)
+            }
+        }
+        self.updateDesc.toggle()
     }
 
 }

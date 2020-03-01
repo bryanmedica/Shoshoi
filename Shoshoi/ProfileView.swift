@@ -10,19 +10,37 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var cardManager: CardManager
-
+    @State var showingAlert: Bool = false
+    
     var body: some View {
-        NavigationView {
-               List(self.cardManager.rules, id: \.self) { cardRule in
-                NavigationLink(destination: EditView(name: cardRule.name,
-                    desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)) {
-                    CardRow(title: cardRule.name,
-                    desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)
-                    .listRowBackground(Color("background"))
+        VStack {
+            NavigationView {
+                List(self.cardManager.rules, id: \.self) { cardRule in
+                    NavigationLink(destination: EditView(name: cardRule.name,
+                        desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)) {
+                        CardRow(title: cardRule.name,
+                        desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)
+                        .listRowBackground(Color("background"))
+                    }
                 }
+                .navigationBarTitle(Text("Rules"))
             }
-            .navigationBarTitle(Text("Rules"))
-        }
+
+            Button(action: {
+                self.showingAlert.toggle()
+            }) {
+                Text("Remettre les règles de départ")
+            }.foregroundColor(Color.black)
+            .background(Color.orange)
+                .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Remettre les règles de départ?"),
+                      message: Text(""),
+                      primaryButton: .cancel(Text("Je garde les miennes")),
+                      secondaryButton: .default(Text("On reprend à zéro"), action: {
+                        self.cardManager.clearRules()
+                }))
+            }
+            }
     }
 }
 

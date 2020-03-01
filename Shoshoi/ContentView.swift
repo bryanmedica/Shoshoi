@@ -26,13 +26,16 @@ struct ContentView: View {
                           message: Text("On repart sur un Shoshoi?"),
                           primaryButton: .cancel(Text("T'es un fou toi je finis la partie")),
                           secondaryButton: .default(Text("Nouvelle tournée patron !"), action: {
-                            let cardName = String(self.userData.actualCard.dropLast())
+                            let cardPrefix = String(self.userData.actualCard.dropLast())
+                            let cardName = self.userData.rules.first(where: {
+                                $0.cardPrefix == cardPrefix
+                            })?.name ?? "Je sais plus je suis cuit"
                             self.userData.cards = Array(beginingCards)
                             self.userData.actualCard = self.userData.cards.remove(at: Int.random(in: 0..<52))
                             if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
                                 self.userData.actualDesc = cardDescription
                             } else {
-                                self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardName})?.defaultRule ?? "Je sais plus je suis cuit"
+                                self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
                             }
                             self.userData.isCardFaceUp = false
                           }))

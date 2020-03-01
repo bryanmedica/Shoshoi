@@ -43,8 +43,9 @@ var tmpCard = tmp.remove(at: Int.random(in: 0..<52))
 
 final class UserData: ObservableObject  {
     @Published var actualCard = tmpCard
-    @Published var actualDesc = cardsJSON.first(where: {$0.cardPrefix == String(tmpCard.dropLast())})?.defaultRule ?? "Je sais plus je suis cuit"
+    @Published var actualDesc = "Je sais plus je suis cuit"
     @Published var cards = Array(tmp)
     @Published var isCardFaceUp = false
     @Published var rules = cardsJSON
+    @Published var sale = false
 }

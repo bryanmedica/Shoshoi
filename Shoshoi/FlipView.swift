@@ -22,6 +22,15 @@ struct FlipView: View {
                     .background(Color("background"))
                     .onTapGesture {
                         self.handleFlipViewTap()
+                        let cardPrefix = String(self.userData.actualCard.dropLast())
+                        let cardName = self.userData.rules.first(where: {
+                            $0.cardPrefix == cardPrefix
+                        })?.name ?? "Je sais plus je suis cuit"
+                        if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
+                            self.userData.actualDesc = cardDescription
+                        } else {
+                            self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
+                        }
                     }
 
                 Side(imageName: self.userData.actualCard)
@@ -31,7 +40,15 @@ struct FlipView: View {
                     .onTapGesture {
                         self.handleFlipViewTap()
                         self.newCard()
-                        self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == String(self.userData.actualCard.dropLast())})?.defaultRule ?? "Je sais plus je suis cuit"
+                        let cardPrefix = String(self.userData.actualCard.dropLast())
+                        let cardName = self.userData.rules.first(where: {
+                            $0.cardPrefix == cardPrefix
+                        })?.name ?? "Je sais plus je suis cuit"
+                        if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
+                            self.userData.actualDesc = cardDescription
+                        } else {
+                            self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
+                        }
                 }
             }
         }.background(Color("background"))

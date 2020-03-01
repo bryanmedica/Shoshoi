@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0B3E91240BBDB900962D8A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B3E90240BBDB900962D8A /* EditView.swift */; };
 		DA4180AE240976F500BE6876 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4180AD240976F500BE6876 /* ProfileView.swift */; };
 		DAACFC752408B3D600B0F10A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACFC742408B3D600B0F10A /* Card.swift */; };
 		DAB241C82407A931008515A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241C72407A931008515A4 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0B3E90240BBDB900962D8A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		DA4180AD240976F500BE6876 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAACFC742408B3D600B0F10A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DAB241C42407A931008515A4 /* Shoshoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoshoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				DAB241DE2407BBAA008515A4 /* UserData.swift */,
 				DAB241E02407D176008515A4 /* FlipView.swift */,
 				DA4180AD240976F500BE6876 /* ProfileView.swift */,
+				DA0B3E90240BBDB900962D8A /* EditView.swift */,
 			);
 			path = Shoshoi;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				DAB241E12407D176008515A4 /* FlipView.swift in Sources */,
 				DAB241C82407A931008515A4 /* AppDelegate.swift in Sources */,
+				DA0B3E91240BBDB900962D8A /* EditView.swift in Sources */,
 				DAB241CA2407A931008515A4 /* SceneDelegate.swift in Sources */,
 				DAACFC752408B3D600B0F10A /* Card.swift in Sources */,
 				DAB241DF2407BBAA008515A4 /* UserData.swift in Sources */,

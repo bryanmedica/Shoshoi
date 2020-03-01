@@ -9,46 +9,29 @@
 import SwiftUI
 
 struct FlipView: View {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var cardManager: CardManager
     @State var desc: String = "Tapez sur le paquet pour découvrir la prochaine carte!"
 
     var body: some View {
         VStack {
             ZStack {
                 Side(imageName: "shoshoi_back")
-                    .rotation3DEffect(.degrees(self.userData.isCardFaceUp ? 180.0 : 0.0), axis: (x: 0.0, y: 1.0, z: 0.0))
-                    .zIndex(self.userData.isCardFaceUp ? 0 : 1)
+                    .rotation3DEffect(.degrees(self.cardManager.isCardFaceUp ? 180.0 : 0.0), axis: (x: 0.0, y: 1.0, z: 0.0))
+                    .zIndex(self.cardManager.isCardFaceUp ? 0 : 1)
                     .frame(width: 300, alignment: .center)
                     .background(Color("background"))
                     .onTapGesture {
                         self.handleFlipViewTap()
-                        let cardPrefix = String(self.userData.actualCard.dropLast())
-                        let cardName = self.userData.rules.first(where: {
-                            $0.cardPrefix == cardPrefix
-                        })?.name ?? "Je sais plus je suis cuit"
-                        if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
-                            self.userData.actualDesc = cardDescription
-                        } else {
-                            self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
-                        }
+                        self.cardManager.updateCardDesc()
                     }
 
-                Side(imageName: self.userData.actualCard)
+                Side(imageName: self.cardManager.actualCard)
                     .background(Color("background"))
-                    .rotation3DEffect(.degrees(self.userData.isCardFaceUp ? 0.0 : 180.0), axis: (x: 0.0, y: -1.0, z: 0.0))
-                    .zIndex(self.userData.isCardFaceUp ? 1 : 0)
+                    .rotation3DEffect(.degrees(self.cardManager.isCardFaceUp ? 0.0 : 180.0), axis: (x: 0.0, y: -1.0, z: 0.0))
+                    .zIndex(self.cardManager.isCardFaceUp ? 1 : 0)
                     .onTapGesture {
                         self.handleFlipViewTap()
-                        self.newCard()
-                        let cardPrefix = String(self.userData.actualCard.dropLast())
-                        let cardName = self.userData.rules.first(where: {
-                            $0.cardPrefix == cardPrefix
-                        })?.name ?? "Je sais plus je suis cuit"
-                        if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
-                            self.userData.actualDesc = cardDescription
-                        } else {
-                            self.userData.actualDesc = self.userData.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
-                        }
+                        self.cardManager.newCard()
                 }
             }
         }.background(Color("background"))
@@ -56,26 +39,21 @@ struct FlipView: View {
     
     private func handleFlipViewTap() -> Void {
         withAnimation(.easeOut(duration:0.25)) {
-            self.userData.isCardFaceUp.toggle()
+            self.cardManager.isCardFaceUp.toggle()
         }
     }
     
-    private func newCard() -> Void {
-        if self.userData.cards.count > 0 {
-            self.userData.actualCard = self.userData.cards.remove(at: Int.random(in: 0..<self.userData.cards.count))
-        }
-    }
 }
 
 public struct Side: View
 {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var cardManager: CardManager
     var imageName: String = ""
 
     public var body: some View
     {
         Image(
-            (imageName == "shoshoi_back" ? "shoshoi_back": userData.actualCard))
+            (imageName == "shoshoi_back" ? "shoshoi_back": cardManager.actualCard))
             .resizable()
             .frame(width: 240, height: 360)
     }
@@ -84,6 +62,6 @@ public struct Side: View
 struct FlipView_Previews: PreviewProvider {
     static var previews: some View {
         FlipView()
-            .environmentObject(UserData())
+            .environmentObject(CardManager())
     }
 }

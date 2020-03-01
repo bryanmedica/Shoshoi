@@ -17,8 +17,9 @@
 		DAB241D12407A934008515A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB241D02407A934008515A4 /* Preview Assets.xcassets */; };
 		DAB241D42407A934008515A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB241D22407A934008515A4 /* LaunchScreen.storyboard */; };
 		DAB241DD2407B7BC008515A4 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = DAB241DC2407B7BC008515A4 /* cards.json */; };
-		DAB241DF2407BBAA008515A4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241DE2407BBAA008515A4 /* UserData.swift */; };
+		DAB241DF2407BBAA008515A4 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241DE2407BBAA008515A4 /* CardManager.swift */; };
 		DAB241E12407D176008515A4 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241E02407D176008515A4 /* FlipView.swift */; };
+		DAF50231240C18C400F7ECAF /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF50230240C18C400F7ECAF /* TopBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		DAB241D32407A934008515A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB241D52407A934008515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB241DC2407B7BC008515A4 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
-		DAB241DE2407BBAA008515A4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		DAB241DE2407BBAA008515A4 /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 		DAB241E02407D176008515A4 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		DAF50230240C18C400F7ECAF /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +87,11 @@
 				DAB241D22407A934008515A4 /* LaunchScreen.storyboard */,
 				DAB241D52407A934008515A4 /* Info.plist */,
 				DAB241CF2407A934008515A4 /* Preview Content */,
-				DAB241DE2407BBAA008515A4 /* UserData.swift */,
+				DAB241DE2407BBAA008515A4 /* CardManager.swift */,
 				DAB241E02407D176008515A4 /* FlipView.swift */,
 				DA4180AD240976F500BE6876 /* ProfileView.swift */,
 				DA0B3E90240BBDB900962D8A /* EditView.swift */,
+				DAF50230240C18C400F7ECAF /* TopBar.swift */,
 			);
 			path = Shoshoi;
 			sourceTree = "<group>";
@@ -182,11 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB241E12407D176008515A4 /* FlipView.swift in Sources */,
+				DAF50231240C18C400F7ECAF /* TopBar.swift in Sources */,
 				DAB241C82407A931008515A4 /* AppDelegate.swift in Sources */,
 				DA0B3E91240BBDB900962D8A /* EditView.swift in Sources */,
 				DAB241CA2407A931008515A4 /* SceneDelegate.swift in Sources */,
 				DAACFC752408B3D600B0F10A /* Card.swift in Sources */,
-				DAB241DF2407BBAA008515A4 /* UserData.swift in Sources */,
+				DAB241DF2407BBAA008515A4 /* CardManager.swift in Sources */,
 				DA4180AE240976F500BE6876 /* ProfileView.swift in Sources */,
 				DAB241CC2407A931008515A4 /* ContentView.swift in Sources */,
 			);

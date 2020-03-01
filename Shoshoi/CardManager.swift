@@ -1,5 +1,5 @@
 //
-//  UserData.swift
+//  .swift
 //  Shoshoi
 //
 //  Created by Bryan MEDICA on 27/02/2020.
@@ -41,11 +41,38 @@ var beginingCards = [
 var tmp = Array(beginingCards)
 var tmpCard = tmp.remove(at: Int.random(in: 0..<52))
 
-final class UserData: ObservableObject  {
+final class CardManager: ObservableObject  {
     @Published var actualCard = tmpCard
     @Published var actualDesc = "Je sais plus je suis cuit"
     @Published var cards = Array(tmp)
     @Published var isCardFaceUp = false
     @Published var rules = cardsJSON
     @Published var sale = false
+    
+    func updateCardDesc() -> Void {
+        let cardPrefix = String(self.actualCard.dropLast())
+        let cardName = self.rules.first(where: {
+            $0.cardPrefix == cardPrefix
+        })?.name ?? "Je sais plus je suis cuit"
+        if let cardDescription = UserDefaults.standard.string(forKey: cardName) {
+            self.actualDesc = cardDescription
+        } else {
+            self.actualDesc = self.rules.first(where: {$0.cardPrefix == cardPrefix})?.defaultRule ?? "Je sais plus je suis cuit"
+        }
+    }
+    
+    func newCard() -> Void {
+        if self.cards.count > 0 {
+            self.actualCard = self.cards.remove(at: Int.random(in: 0..<self.cards.count))
+            self.updateCardDesc()
+        }
+    }
+    
+    func newGame() -> Void {
+        self.cards = Array(beginingCards)
+        self.actualCard = self.cards.remove(at: Int.random(in: 0..<52))
+        self.updateCardDesc()
+        self.isCardFaceUp = false
+    }
+
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditView: View {
 
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var cardManager: CardManager
     var name: String
     @State var desc: String
 
@@ -20,7 +20,7 @@ struct EditView: View {
                 TextField("Entrez la règle", text: $desc, onEditingChanged: { (changed) in
                     if !changed {
                         UserDefaults.standard.set(self.desc, forKey: self.name)
-                        self.userData.sale = !(self.userData.sale)
+                        self.cardManager.sale = !(self.cardManager.sale)
                         print("C'est fait : \(self.desc)")
                     }
                 }) {
@@ -31,7 +31,7 @@ struct EditView: View {
                 Button(action: {
                     self.desc = ""
                     UserDefaults.standard.set(self.desc, forKey: self.name)
-                    self.userData.sale = !(self.userData.sale)
+                    self.cardManager.sale = !(self.cardManager.sale)
                     print("C'est fait : \(self.desc)")
                 }) {
                     Image(systemName: "xmark.circle")
@@ -51,6 +51,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(name: "AS", desc: "Tout le monde boit").environmentObject(UserData())
+        EditView(name: "AS", desc: "Tout le monde boit").environmentObject(CardManager())
     }
 }

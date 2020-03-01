@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var cardManager: CardManager
 
     var body: some View {
         NavigationView {
-               List(self.userData.rules, id: \.self) { cardRule in
+               List(self.cardManager.rules, id: \.self) { cardRule in
                 NavigationLink(destination: EditView(name: cardRule.name,
                     desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)) {
                     CardRow(title: cardRule.name,
@@ -46,6 +46,6 @@ public struct CardRow: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject(UserData())
+        ProfileView().environmentObject(CardManager())
     }
 }

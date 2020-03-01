@@ -1,0 +1,60 @@
+//
+//  TopBar.swift
+//  Shoshoi
+//
+//  Created by Bryan MEDICA on 01/03/2020.
+//  Copyright © 2020 Bryan MEDICA. All rights reserved.
+//
+
+import SwiftUI
+
+struct TopBar: View {
+    @EnvironmentObject var cardManager: CardManager
+    @State var showSettings: Bool = false
+    @State private var showingAlert = false
+
+    var body: some View {
+        HStack {
+            Button(action: {
+                self.showingAlert = true
+            }) {
+                Image("shuffle")
+                .foregroundColor(Color.orange)
+            }.alert(isPresented: $showingAlert) {
+                Alert(title: Text("Lancer une nouvelle partie"),
+                      message: Text("On repart sur un Shoshoi?"),
+                      primaryButton: .cancel(Text("T'es un fou toi je finis la partie")),
+                      secondaryButton: .default(Text("Nouvelle tournée patron !"), action: {
+                        self.cardManager.newGame()
+                }))
+            }
+
+            Spacer()
+
+            Text("Shoshoi")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+            
+            Spacer()
+
+            Button(action: {
+                self.showSettings.toggle()
+            }) {
+                Image(systemName: "gear")
+                    .foregroundColor(Color.orange)
+                    .font(.system(size: 28))
+            }.sheet(isPresented: $showSettings) {
+                ProfileView()
+                    .environmentObject(self.cardManager)
+            }
+        }.padding()
+        .frame(minWidth: 0.0, maxWidth: .infinity)
+    }
+}
+
+struct TopBar_Previews: PreviewProvider {
+    static var previews: some View {
+        TopBar().environmentObject(CardManager())
+    }
+}

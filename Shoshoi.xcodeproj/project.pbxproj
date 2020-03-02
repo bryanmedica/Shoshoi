@@ -19,6 +19,7 @@
 		DAB241DD2407B7BC008515A4 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = DAB241DC2407B7BC008515A4 /* cards.json */; };
 		DAB241DF2407BBAA008515A4 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241DE2407BBAA008515A4 /* CardManager.swift */; };
 		DAB241E12407D176008515A4 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB241E02407D176008515A4 /* FlipView.swift */; };
+		DAE3DA6A240CC75E00F477DC /* shorterCards.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE3DA69240CC75E00F477DC /* shorterCards.json */; };
 		DAF50231240C18C400F7ECAF /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF50230240C18C400F7ECAF /* TopBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		DAB241DC2407B7BC008515A4 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		DAB241DE2407BBAA008515A4 /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 		DAB241E02407D176008515A4 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		DAE3DA69240CC75E00F477DC /* shorterCards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shorterCards.json; sourceTree = "<group>"; };
 		DAF50230240C18C400F7ECAF /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB241DC2407B7BC008515A4 /* cards.json */,
+				DAE3DA69240CC75E00F477DC /* shorterCards.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB241D42407A934008515A4 /* LaunchScreen.storyboard in Resources */,
+				DAE3DA6A240CC75E00F477DC /* shorterCards.json in Resources */,
 				DAB241D12407A934008515A4 /* Preview Assets.xcassets in Resources */,
 				DAB241CE2407A934008515A4 /* Assets.xcassets in Resources */,
 				DAB241DD2407B7BC008515A4 /* cards.json in Resources */,

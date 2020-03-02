@@ -6,12 +6,12 @@
     },
     {
         "name": "Roi",
-        "defaultRule": "La personne qui a tiré cette carte lance un Fuck you !",
+        "defaultRule": "La personne qui a tiré cette carte devient roi des freezes !",
         "cardPrefix": "K"
     },
     {
         "name": "Dame",
-        "defaultRule": "La personne qui a tiré cette carte devient roi/reine des questions !",
+        "defaultRule": "La personne qui a tiré cette carte devient reine des questions !",
         "cardPrefix": "Q"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "name": "Sept",
-        "defaultRule": "La personne qui a tiré cette carte devient roi/reine des freezes !",
+        "defaultRule": "La personne qui a tiré cette carte lance un Fuck You !",
         "cardPrefix": "7",
     },
     {
@@ -61,7 +61,7 @@
     },
     {
         "name": "Deux",
-        "defaultRule": "La personne qui a tiré cette carte devient roi/reine des pouces !",
+        "defaultRule": "La personne qui a tiré cette carte devient roi des pouces !",
         "cardPrefix": "2",
     },
 ]

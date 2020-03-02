@@ -41,9 +41,10 @@ struct TopBar: View {
             Button(action: {
                 self.showSettings.toggle()
             }) {
-                Image(systemName: "gear")
+                Image(systemName: "rectangle.on.rectangle.angled")
                     .foregroundColor(Color.orange)
                     .font(.system(size: 28))
+                .rotationEffect(Angle(degrees: -270))
             }.sheet(isPresented: $showSettings) {
                 ProfileView().environmentObject(self.cardManager)
             }

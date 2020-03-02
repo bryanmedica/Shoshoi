@@ -11,6 +11,7 @@ import SwiftUI
 import Combine
 
 let cardsJSON: [Card] = load("cards.json")
+let shorterCardsJSON: [Card] = load("shorterCards.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -82,6 +83,13 @@ final class CardManager: ObservableObject  {
                 UserDefaults.standard.removeObject(forKey: elem.name)
             }
         }
+        self.rules = cardsJSON
+        self.updateCardDesc()
+    }
+    
+    func shortenCards() -> Void {
+        self.clearRules()
+        self.rules = shorterCardsJSON
         self.updateCardDesc()
     }
 

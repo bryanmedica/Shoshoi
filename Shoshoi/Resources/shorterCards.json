@@ -1,0 +1,67 @@
+[
+    {
+        "name": "As",
+        "defaultRule": "Tout le monde boit !",
+        "cardPrefix": "A"
+    },
+    {
+        "name": "Roi",
+        "defaultRule": "Roi des freezes !",
+        "cardPrefix": "K"
+    },
+    {
+        "name": "Dame",
+        "defaultRule": "Reine des questions !",
+        "cardPrefix": "Q"
+    },
+    {
+        "name": "Valet",
+        "defaultRule": "Mini jeu !",
+        "cardPrefix": "J",
+    },
+    {
+        "name": "Dix",
+        "defaultRule": "Thème à répétition !",
+        "cardPrefix": "10",
+    },
+    {
+        "name": "Neuf",
+        "defaultRule": "Thème sans répétition !",
+        "cardPrefix": "9",
+    },
+    {
+        "name": "Huit",
+        "defaultRule": "Shoshoi !",
+        "cardPrefix": "8",
+    },
+    {
+        "name": "Sept",
+        "defaultRule": "Fuck You !",
+        "cardPrefix": "7",
+    },
+    {
+        "name": "Six",
+        "defaultRule": "Ça boit à gauche !",
+        "cardPrefix": "6",
+    },
+    {
+        "name": "Cinq",
+        "defaultRule": "Ça boit à droite !",
+        "cardPrefix": "5",
+    },
+    {
+        "name": "Quatre",
+        "defaultRule": "Jeu du regard !",
+        "cardPrefix": "4",
+    },
+    {
+        "name": "Trois",
+        "defaultRule": "Nouvelle règle !",
+        "cardPrefix": "3",
+    },
+    {
+        "name": "Deux",
+        "defaultRule": "Roi des pouces !",
+        "cardPrefix": "2",
+    },
+]

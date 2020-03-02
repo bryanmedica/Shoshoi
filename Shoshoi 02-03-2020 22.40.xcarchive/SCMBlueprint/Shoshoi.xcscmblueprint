@@ -1,0 +1,26 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "522309F0AA336DC4F655EEFF754CCEA82928BD11" : {
+      "DVTSourceControlBranchIdentifierKey" : "master",
+      "DVTSourceControlLocationRevisionKey" : "0f050f5cd5999ce741ab20c7b3c704e6905e213d",
+      "DVTSourceControlBranchOptionsKey" : 4,
+      "DVTSourceControlBranchRemoteNameKey" : "origin",
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "522309F0AA336DC4F655EEFF754CCEA82928BD11",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "21AA9046-317B-4B11-999D-9517DDED40CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "522309F0AA336DC4F655EEFF754CCEA82928BD11" : "Shoshoi\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Shoshoi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Shoshoi.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bryanmedica\/Shoshoi.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "522309F0AA336DC4F655EEFF754CCEA82928BD11"
+    }
+  ]
+}

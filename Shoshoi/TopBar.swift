@@ -46,7 +46,7 @@ struct TopBar: View {
                     .font(.system(size: 28))
                 .rotationEffect(Angle(degrees: -270))
             }.sheet(isPresented: $showSettings) {
-                ProfileView().environmentObject(self.cardManager)
+                SettingsView().environmentObject(self.cardManager)
             }
         }.padding()
         .frame(minWidth: 0.0, maxWidth: .infinity)

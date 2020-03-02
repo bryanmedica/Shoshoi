@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct SettingsView: View {
     @EnvironmentObject var cardManager: CardManager
     @State var showingResetAlert: Bool = false
     @State var showingShortenAlert: Bool = false
@@ -57,8 +57,7 @@ struct ProfileView: View {
         VStack {
             NavigationView {
                 List(self.cardManager.rules, id: \.self) { cardRule in
-                    NavigationLink(destination: EditView(name: cardRule.name,
-                        desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)) {
+                    NavigationLink(destination: EditView(name: cardRule.name, desc: UserDefaults.standard.string(forKey:                                                cardRule.name) ?? cardRule.defaultRule)) {
                         CardRow(title: cardRule.name,
                         desc: UserDefaults.standard.string(forKey: cardRule.name) ?? cardRule.defaultRule)
                         .listRowBackground(Color("background"))
@@ -88,8 +87,8 @@ public struct CardRow: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject(CardManager())
+        SettingsView().environmentObject(CardManager())
     }
 }

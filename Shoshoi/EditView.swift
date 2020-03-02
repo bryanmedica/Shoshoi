@@ -22,8 +22,8 @@ struct EditView: View {
                         self.cardManager.updateCardDesc()
                     }
                 }) {
-                }.foregroundColor(.white)
-                .padding()
+                }.foregroundColor(Color.white)
+                .padding([.vertical])
 
                 Button(action: {
                     self.desc = ""
@@ -35,8 +35,8 @@ struct EditView: View {
                     .padding()
                 }
             }.background(Color("bg-clear"))
-                .border(Color.white, width: 1)
-                .padding([.vertical])
+            .padding()
+
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
         .background(Color("background")

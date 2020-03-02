@@ -12,10 +12,14 @@ struct ContentView: View {
     @EnvironmentObject var cardManager: CardManager
 
     init() {
-        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+        let backgroundColor: UIColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+        UINavigationBar.appearance().backgroundColor = backgroundColor
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        UITableView.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
-        UITableViewCell.appearance().backgroundColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        UINavigationBar.appearance().barTintColor = backgroundColor
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UITableView.appearance().backgroundColor = backgroundColor
+        UITableViewCell.appearance().backgroundColor = backgroundColor
     }
     
     var body: some View {

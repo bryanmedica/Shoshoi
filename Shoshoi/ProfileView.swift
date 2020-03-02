@@ -21,7 +21,7 @@ struct ProfileView: View {
                 Image(systemName: "arrow.2.circlepath")
                     .foregroundColor(Color.orange)
                     .font(.system(size: 28))
-            }.foregroundColor(Color.white)
+            }
             .alert(isPresented: $showingResetAlert) {
                 Alert(title: Text("Remettre les règles de départ?"),
                       message: Text(""),
@@ -78,9 +78,10 @@ public struct CardRow: View {
     public var body: some View {
         HStack {
             Text(self.title)
+                .foregroundColor(Color.white)
                 .frame(width: 80)
             Text(self.desc)
-            .foregroundColor(Color.white)
+                .foregroundColor(Color.white)
                 .padding([.vertical])
             Spacer()
         }.background(Color("background"))

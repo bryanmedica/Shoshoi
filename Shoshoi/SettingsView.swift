@@ -11,14 +11,13 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var cardManager: CardManager
     @State var showingResetAlert: Bool = false
-    @State var showingShortenAlert: Bool = false
 
     var toolsButtons: some View {
         HStack {
             Button(action: {
                 self.showingResetAlert.toggle()
             }) {
-                Image(systemName: "arrow.2.circlepath")
+                Image(systemName: "gobackward")
                     .foregroundColor(Color.orange)
                     .font(.system(size: 28))
             }
@@ -29,25 +28,6 @@ struct SettingsView: View {
                               self.cardManager.clearRules()
                       }),
                       secondaryButton: .cancel(Text("Je garde les miennes")))
-            }
-            .position(x: 10, y: 10)
-
-            Button(action: {
-                self.showingShortenAlert.toggle()
-            }) {
-                Image(systemName: "scissors")
-                    .foregroundColor(Color.orange)
-                    .font(.system(size: 28))
-            }.foregroundColor(Color.white)
-            .alert(isPresented: $showingShortenAlert) {
-                Alert(title: Text("Raccourcir les règles ?"),
-                      message: Text(""),
-                      primaryButton: .default(Text("Oui mon iPhone est trop petit..."), action: {
-                        self.cardManager.shortenCards()
-                      }),
-                      secondaryButton: .cancel(
-                        Text("Non, je connais les règles par coeur")
-                    ))
             }
             .position(x: 10, y: 10)
         }

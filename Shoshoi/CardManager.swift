@@ -11,7 +11,7 @@ import SwiftUI
 import Combine
 
 let cardsJSON: [Card] = load("cards.json")
-let shorterCardsJSON: [Card] = load("shorterCards.json")
+var beginingCards: [String] = load("cardsAssetsList.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -35,10 +35,6 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
-var beginingCards = [
-    "10C", "10D", "10H", "10S", "2C", "2D", "2H", "2S", "3C", "3D", "3H", "3S", "4C", "4D", "4H", "4S", "5C", "5D", "5H", "5S", "6C", "6D", "6H", "6S", "7C", "7D", "7H", "7S", "8C", "8D", "8H", "8S", "9C", "9D", "9H", "9S", "AC", "AD", "AH", "AS", "JC", "JD", "JH", "JS", "KC", "KD", "KH", "KS", "QC", "QD", "QH", "QS"
-]
-
 var tmp = Array(beginingCards)
 var tmpCard = tmp.remove(at: Int.random(in: 0..<52))
 
@@ -49,6 +45,7 @@ final class CardManager: ObservableObject  {
     @Published var isCardFaceUp = false
     @Published var rules = cardsJSON
     @Published var updateDesc = false
+    @Published var firstCard = true
     
     func updateCardDesc() -> Void {
         let cardPrefix = String(self.actualCard.dropLast())
@@ -75,6 +72,7 @@ final class CardManager: ObservableObject  {
         self.actualCard = self.cards.remove(at: Int.random(in: 0..<52))
         self.updateCardDesc()
         self.isCardFaceUp = false
+        self.firstCard = true
     }
     
     func clearRules() -> Void {
@@ -84,12 +82,6 @@ final class CardManager: ObservableObject  {
             }
         }
         self.rules = cardsJSON
-        self.updateCardDesc()
-    }
-    
-    func shortenCards() -> Void {
-        self.clearRules()
-        self.rules = shorterCardsJSON
         self.updateCardDesc()
     }
 

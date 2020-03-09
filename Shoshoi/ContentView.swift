@@ -33,8 +33,7 @@ struct ContentView: View {
 
             FlipView().padding()
 
-            Text((self.cardManager.isCardFaceUp ? self.cardManager.actualDesc
-                : "Tapez sur le paquet pour découvrir la prochaine carte!"))
+            Text((self.cardManager.isCardFaceUp ? self.cardManager.actualDesc : "Tapez sur le paquet!"))
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
                 .foregroundColor(Color.white)

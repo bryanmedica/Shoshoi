@@ -10,7 +10,6 @@ import SwiftUI
 
 struct FlipView: View {
     @EnvironmentObject var cardManager: CardManager
-    @State var desc: String = "Tapez sur le paquet pour découvrir la prochaine carte!"
 
     var body: some View {
         VStack {
@@ -41,6 +40,14 @@ struct FlipView: View {
         withAnimation(.easeOut(duration:0.25)) {
             self.cardManager.isCardFaceUp.toggle()
         }
+        if self.cardManager.firstCard {
+            self.cardManager.firstCard.toggle()
+        }
+        else {
+            withAnimation(.easeOut(duration:0.35)) {
+                self.cardManager.isCardFaceUp.toggle()
+            }
+        }
     }
     
 }
@@ -58,7 +65,6 @@ public struct Side: View {
 
 struct FlipView_Previews: PreviewProvider {
     static var previews: some View {
-        FlipView()
-            .environmentObject(CardManager())
+        FlipView().environmentObject(CardManager())
     }
 }

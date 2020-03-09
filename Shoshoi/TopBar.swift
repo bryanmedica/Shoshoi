@@ -20,6 +20,7 @@ struct TopBar: View {
             }) {
                 Image("shuffle")
                 .foregroundColor(Color.orange)
+                .font(.system(size: 28))
             }.alert(isPresented: $showingAlert) {
                 Alert(title: Text("Lancer une nouvelle partie"),
                       message: Text("On repart sur un Shoshoi?"),
@@ -44,7 +45,7 @@ struct TopBar: View {
                 Image(systemName: "rectangle.on.rectangle.angled")
                     .foregroundColor(Color.orange)
                     .font(.system(size: 28))
-                .rotationEffect(Angle(degrees: -270))
+                    .rotationEffect(Angle(degrees: 90))
             }.sheet(isPresented: $showSettings) {
                 SettingsView().environmentObject(self.cardManager)
             }
@@ -55,6 +56,6 @@ struct TopBar: View {
 
 struct TopBar_Previews: PreviewProvider {
     static var previews: some View {
-        TopBar().environmentObject(CardManager())
+        TopBar().environmentObject(CardManager()).previewDevice("iPhone SE")
     }
 }

@@ -6,62 +6,62 @@
     },
     {
         "name": "Roi",
-        "defaultRule": "La personne qui a tiré cette carte devient roi des freezes !",
+        "defaultRule": "Roi des freezes !",
         "cardPrefix": "K"
     },
     {
         "name": "Dame",
-        "defaultRule": "La personne qui a tiré cette carte devient reine des questions !",
+        "defaultRule": "Reine des questions !",
         "cardPrefix": "Q"
     },
     {
         "name": "Valet",
-        "defaultRule": "La personne qui a tiré cette carte lance un mini jeu !",
+        "defaultRule": "Mini jeu !",
         "cardPrefix": "J",
     },
     {
         "name": "Dix",
-        "defaultRule": "La personne qui a tiré cette carte lance un thème à répétition !",
+        "defaultRule": "Thème à répétition !",
         "cardPrefix": "10",
     },
     {
         "name": "Neuf",
-        "defaultRule": "La personne qui a tiré cette carte lance un thème sans répétition !",
+        "defaultRule": "Thème sans répétition !",
         "cardPrefix": "9",
     },
     {
         "name": "Huit",
-        "defaultRule": "Le dernier à dire Shoshoi boit !",
+        "defaultRule": "Shoshoi !",
         "cardPrefix": "8",
     },
     {
         "name": "Sept",
-        "defaultRule": "La personne qui a tiré cette carte lance un Bang (Jeu des 7) !",
+        "defaultRule": "Bang ! (Jeu des 7)",
         "cardPrefix": "7",
     },
     {
         "name": "Six",
-        "defaultRule": "La personne à gauche de celle qui a tiré cette carte boit !",
+        "defaultRule": "Ça boit à gauche !",
         "cardPrefix": "6",
     },
     {
         "name": "Cinq",
-        "defaultRule": "La personne à droite de celle qui a tiré cette carte boit !",
+        "defaultRule": "Ça boit à droite !",
         "cardPrefix": "5",
     },
     {
         "name": "Quatre",
-        "defaultRule": "La personne qui tire cette carte lance un jeu du regard !",
+        "defaultRule": "Jeu du regard !",
         "cardPrefix": "4",
     },
     {
         "name": "Trois",
-        "defaultRule": "La personne qui a tiré cette carte invente une règle !",
+        "defaultRule": "Nouvelle règle !",
         "cardPrefix": "3",
     },
     {
         "name": "Deux",
-        "defaultRule": "La personne qui a tiré cette carte devient roi des pouces !",
+        "defaultRule": "Roi des pouces !",
         "cardPrefix": "2",
     },
 ]

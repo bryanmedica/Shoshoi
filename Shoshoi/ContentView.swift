@@ -12,13 +12,23 @@ struct ContentView: View {
     @EnvironmentObject var cardManager: CardManager
 
     init() {
+        /* Shoshoi's app color */
         let backgroundColor: UIColor = UIColor.init(red: 55 / 255, green: 57 / 255, blue: 63 / 255, alpha: 1)
-        UINavigationBar.appearance().backgroundColor = backgroundColor
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        /* Buttons color */
         UINavigationBar.appearance().tintColor = UIColor.orange
+
+        /* Navigation bars color */
         UINavigationBar.appearance().barTintColor = backgroundColor
+
+        /* Titles colors */
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        /* List table color */
         UITableView.appearance().backgroundColor = backgroundColor
+
+        /* Cell color */
         UITableViewCell.appearance().backgroundColor = backgroundColor
     }
     
@@ -27,7 +37,7 @@ struct ContentView: View {
             
             TopBar()
 
-            Text("Nombre de cartes restantes : \(cardManager.cards.count + 1)")
+            Text("Nombre de cartes restantes : \(self.cardManager.cards.count + 1)")
             .foregroundColor(Color.white)
             Spacer()
 
